@@ -2,7 +2,6 @@
 
 live_loop :odd do
   with_fx :flanger do
-    #with_fx :lpf do
     with_fx :echo, decay: 0.1 , phase: 0.001 do
       with_fx :gverb , tail_level: 0.1 , damp: 0.2, room: 10 do
         with_fx :bitcrusher , sample_rate: 10000 do
@@ -11,7 +10,6 @@ live_loop :odd do
           end
         end
       end
-      #end
     end
   end
   sleep 4
