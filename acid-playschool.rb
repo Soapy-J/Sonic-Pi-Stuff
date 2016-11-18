@@ -6,9 +6,9 @@ live_loop :my_loop do
   use_synth :tb303
 
   sample :drum_bass_hard, rate: rrand(0.5,2), amp: 0.6
-  play choose(chord(:c2, :minor7)), release: 0.2, cutoff: rrand(60, 130), amp: 0.3
-  play choose(chord(:f2, :i7)), release: 0.2, cutoff: rrand(60, 130), amp: rrand(0.01,0.7)
-  play choose(chord(:g2, :major)), release: 0.2, cutoff: rrand(60, 130), amp: rrand(0.01,0.7)
+  play choose(chord(:c2, :major)), release: 0.2, cutoff: rrand(60, 130), amp: 0.3
+  play choose(chord(:f2, :major7)), release: 0.2, cutoff: rrand(60, 130), amp: rrand(0.01,0.7)
+  play choose(chord(:g2, :major7)), release: 0.2, cutoff: rrand(60, 130), amp: rrand(0.01,0.7)
   sleep 0.25
 end
 
