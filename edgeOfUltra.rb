@@ -17,7 +17,7 @@ end
 
 define :boom do
   use_synth :beep
-  play :g8, amp: 0.1
+  play choose([:g2,:g8,:fs8,:g0]), amp: 0.1
   sleep 0.2
   play :c3, amp: 0.1
   sleep 0.1
