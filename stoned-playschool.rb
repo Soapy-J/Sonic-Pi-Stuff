@@ -8,15 +8,13 @@ live_loop :my_loop do
     with_fx :wobble , wave: 1, cutoff_max: 100, res: 0.2 do
       with_fx :flanger do
         with_fx :lpf do
-          sample :drum_heavy_kick, rate: rrand(0.01,10), amp: 1          
+          sample :drum_heavy_kick, rate: rrand(0.01,10), amp: 2.5
         end
       end
     end
   end
   
   play choose(chord(:c, :major)), release: 0.5, cutoff: rrand(60, 90), amp: 1
-  play choose(chord(:f, :major7)), release: 0.5, cutoff: rrand(60, 130), amp: 0#rrand(0.01,0.7)
-  play choose(chord(:g2, :major)), release: 0.2, cutoff: rrand(60, 130), amp: 0#rrand(0.01,0.7)
   sleep ([0.25]).choose
 end
 
@@ -40,7 +38,7 @@ end
 
 live_loop :tingaling do
   use_synth :piano
-  use_synth_defaults amp: 0
+  use_synth_defaults amp: 3
   play :c5
   sleep 1.0/12
   play :d5
@@ -49,24 +47,6 @@ live_loop :tingaling do
   sleep 1.0/12
   play :f5
   sleep  1 + 9.0 /12
+  play :g5
+  sleep  1 + 9.0 /12
 end
-
-live_loop :tingal0ng do
-  use_synth :piano
-  use_synth_defaults amp: 0
-  
-  sleep 1
-  play :e4
-  sleep 1.0/16
-  play :d4
-  sleep 1.0/16
-  play :c4
-  sleep 1.0/16
-  play :f4
-  sleep 1.0/16
-  play :c5
-  sleep 1
-end
-
-
-
